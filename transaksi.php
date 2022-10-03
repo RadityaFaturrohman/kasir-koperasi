@@ -294,7 +294,7 @@
                <ul class="metismenu list-unstyled" id="side-menu">
                    <li class="menu-title" data-key="t-menu">Menu</li>
 
-                   <<li class="mm-active">
+                   <li>
                         <a href="index.php">
                             <i class="bx bx-home-circle nav-icon"></i>
                             <span class="menu-item" data-key="t-dashboard">Dashboard</span>
@@ -303,7 +303,7 @@
 
                    <li class="menu-title" data-key="t-applications">General</li>
 
-                   <li>
+                   <li class="mm-active">
                        <a href="transaksi.php">
                            <i class="fa-solid fa-money-bill-transfer nav-icon"></i>
                            <span class="menu-item" data-key="t-calendar">Transaksi</span>

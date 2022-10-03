@@ -294,7 +294,7 @@
                <ul class="metismenu list-unstyled" id="side-menu">
                    <li class="menu-title" data-key="t-menu">Menu</li>
 
-                   <li class="mm-active">
+                   <li>
                         <a href="index.php">
                             <i class="bx bx-home-circle nav-icon"></i>
                             <span class="menu-item" data-key="t-dashboard">Dashboard</span>
@@ -310,7 +310,7 @@
                        </a>
                    </li>
 
-                   <li>
+                   <li class="mm-active">
                        <a href="barang.html">
                            <i class="fa-solid fa-boxes-stacked nav-icon"></i>
                            <span class="menu-item" data-key="t-chat">Barang</span>
