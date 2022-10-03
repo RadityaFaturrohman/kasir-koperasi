@@ -294,31 +294,31 @@
                <ul class="metismenu list-unstyled" id="side-menu">
                    <li class="menu-title" data-key="t-menu">Menu</li>
 
-                   <li class="mm-active">
-                       <a href="#">
-                           <i class="bx bx-home-circle nav-icon"></i>
-                           <span class="menu-item" data-key="t-dashboard">Dashboard</span>
-                       </a>
-                   </li>
+                   <<li class="mm-active">
+                        <a href="index.php">
+                            <i class="bx bx-home-circle nav-icon"></i>
+                            <span class="menu-item" data-key="t-dashboard">Dashboard</span>
+                        </a>
+                    </li>
 
                    <li class="menu-title" data-key="t-applications">General</li>
 
                    <li>
-                       <a href="transaksi.html">
+                       <a href="transaksi.php">
                            <i class="fa-solid fa-money-bill-transfer nav-icon"></i>
                            <span class="menu-item" data-key="t-calendar">Transaksi</span>
                        </a>
                    </li>
 
                    <li>
-                       <a href="barang.html">
+                       <a href="barang.php">
                            <i class="fa-solid fa-boxes-stacked nav-icon"></i>
                            <span class="menu-item" data-key="t-chat">Barang</span>
                        </a>
                    </li>
 
                    <li>
-                       <a href="penjualan.html">
+                       <a href="penjualan.php">
                            <i class="fa-solid fa-box-open nav-icon"></i>
                            <span class="menu-item" data-key="t-kanban">Penjualan</span>
                        </a>

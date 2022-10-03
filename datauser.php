@@ -295,7 +295,7 @@
                         <li class="menu-title" data-key="t-menu">Menu</li>
 
                         <li class="mm-active">
-                            <a href="#">
+                            <a href="index.php">
                                 <i class="bx bx-home-circle nav-icon"></i>
                                 <span class="menu-item" data-key="t-dashboard">Dashboard</span>
                             </a>
@@ -304,21 +304,21 @@
                         <li class="menu-title" data-key="t-applications">Applications</li>
 
                         <li>
-                            <a href="landingpage.php">
+                            <a href="transaksi.php">
                                 <i class="bx bxl-trello nav-icon"></i>
                                 <span class="menu-item" data-key="t-calendar">Transaksi</span>
                             </a>
                         </li>
 
                         <li>
-                            <a href="apps-chat.html">
+                            <a href="barang.php">
                                 <i class="bx bx-diamond nav-icon"></i>
                                 <span class="menu-item" data-key="t-chat">Barang</span>
                             </a>
                         </li>
 
                         <li>
-                            <a href="womenwatch.php">
+                            <a href="penjualan.php">
                                 <i class="bx bxs-watch-alt nav-icon"></i>
                                 <span class="menu-item" data-key="t-kanban">Penjualan</span>
                             </a>
@@ -350,8 +350,8 @@
                     <th>Kelas</th>
                     <th>Aksi</th>
                 </tr>
-                <?php
-            $sql = "SELECT * FROM ";
+            <?php
+            $sql = "SELECT * FROM list_user";
             $query = mysqli_query($connect,$sql);
             
 
