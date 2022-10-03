@@ -336,39 +336,39 @@
         </div>
 
        
-        <div class="create">
+       <div id="table">
+
+       <div class="create">
             <a href="siswa.html" class="text-create">CREATE</a>
         </div>
 
-        <table border="1">
+        <table  border="1">
                 <tr>
-                    <th>ID</th>
-                    <th>Nama</th>
-                    <th>Kelamin</th>
-                    <th>Tanggal-Lahir</th>
-                    <th>Alamat</th>
-                    <th>Kelas</th>
+                    <th>id</th>
+                    <th>namauser</th>
+                    <th>alamat</th>
+                    <th>telepon</th>
+                    <th>kelas</th>
                     <th>Aksi</th>
                 </tr>
                 <?php
-            $sql = "SELECT * FROM ";
+            $sql = "SELECT * FROM datauser";
             $query = mysqli_query($connect,$sql);
             
 
             while($data = mysqli_fetch_array($query)){
                 echo"
                 <tr>
-                    <td>$data[ID]</td>
-                    <td>$data[Nama]</td>
-                    <td>$data[Kelamin]</td>
-                    <td>$data[TanggalLahir]</td>
-                    <td>$data[Alamat]</td>
-                    <td>$data[Kelas]</td>
+                    <td>$data[id]</td>
+                    <td>$data[namauser]</td>
+                    <td>$data[alamat]</td>
+                    <td>$data[telepon]</td>
+                    <td>$data[kelas]</td>
                     <td>
     
-                    <div class='kotakaja'><a href='formubah.php?ID=".$data['ID']."' class='button'>Edit</a></div>
+                    <div class='kotakaja'><a href='formubah.php?ID=".$data['id']."' class='button'>Edit</a></div>
 
-                    <div class='kotakajaa'><a href='hapus.php?ID=".$data['ID']."' class='button'>Hapus</a></div>
+                    <div class='kotakajaa'><a href='hapus.php?ID=".$data['id']."' class='button'>Hapus</a></div>
                        
                      
     
@@ -383,6 +383,8 @@
     
     </div>
 
+
+       </div>
 
     </body>
 
