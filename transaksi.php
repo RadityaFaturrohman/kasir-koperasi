@@ -1,3 +1,7 @@
+<?php
+    include 'koneksi.php';
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -300,28 +304,28 @@
                    <li class="menu-title" data-key="t-applications">General</li>
 
                    <li>
-                       <a href="landingpage.php">
+                       <a href="transaksi.html">
                            <i class="fa-solid fa-money-bill-transfer nav-icon"></i>
                            <span class="menu-item" data-key="t-calendar">Transaksi</span>
                        </a>
                    </li>
 
                    <li>
-                       <a href="apps-chat.html">
+                       <a href="barang.html">
                            <i class="fa-solid fa-boxes-stacked nav-icon"></i>
                            <span class="menu-item" data-key="t-chat">Barang</span>
                        </a>
                    </li>
 
                    <li>
-                       <a href="womenwatch.php">
+                       <a href="penjualan.html">
                            <i class="fa-solid fa-box-open nav-icon"></i>
                            <span class="menu-item" data-key="t-kanban">Penjualan</span>
                        </a>
                    </li>
 
                    <li>
-                       <a href="apps-file-manager.html">
+                       <a href="datauser.php">
                            <i class="fa-solid fa-users nav-icon"></i>
                            <span class="menu-item" data-key="t-filemanager">List User</span>
                        </a>
