@@ -235,8 +235,8 @@
                         echo "<td>".$barang['stok']."</td>";
 
                         echo "<td style='width:20%'>";
-                        echo "<a class='btn btn-outline-info action-btn' href='formedit2.php?id=".$barang['id_barang']."'>Edit</a> | ";
-                        echo "<a class='btn btn-outline-danger action-btn' href='delete2.php?id=".$barang['id_barang']."'>Delete</a>";
+                        echo "<a class='btn btn-outline-info action-btn' href='formedit.php?id=".$barang['id_barang']."'>Edit</a> | ";
+                        echo "<a class='btn btn-outline-danger action-btn' href='delete.php?id=".$barang['id_barang']."'>Delete</a>";
                         echo "</td>";
                         echo "</tr>";
                     }

@@ -1,3 +1,16 @@
+<?php
+    include '../koneksi.php';
+
+    $id_barang = $_GET['id_barang'];
+    $sql = "SELECT * FROM barang WHERE id_barang = '$id_barang'";
+    $query = mysql_query($connect, $sql);
+    $data = mysqli_fetch_assoc($query);
+
+    if (mysqli_num_rows($query)< 1){
+        die("data tidak ditemukan"
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -210,24 +223,19 @@
    <!-- Left Sidebar End -->
    <div class="main-content">
     <div class="container" style="overflow: auto;">
-        
-        <form action="submit.php" method="POST">
-            <div class="form">
-                <p><label>ID Barang</label><input type="text" name="id_barang" required="required"></p>
-                <p><label>Nama Barang</label><input type="text" name="nama_barang" required="required"></p>
-                <p><label>Jenis Barang</label><select name="jenis" id="jenis">
+        <div class="form">
+            <form action="edit.php" method="POST">
+                <input type="hidden" name="id_barang" value="<?php echo $data['id_barang']?>"/>
+                <p><label>Nama Barang</label><input type="text" name="nama_barang" value="<?php echo $data['nama_barang'] ?>"></p>
+                <p><label>Jenis</label><select name="jenis" id="jenis" value="<?php echo $data['jenis'] ?>">
                     <option>Makanan</option>
                     <option>Minuman</option>
                     <option>Alat Tulis</option>
                 </select></p>
-                <p><label>Harga</label><input type="number" name="harga" required="required"></p>
-                <p><label>Stok</label><input type="number" name="stok" required="required"></p>
+                <p><label>Harga</label><input type="number" name="harga" value="<?php echo $data['harga'] ?>"></p>
+                <p><label>Stok</label><input type="number" name="stok" value="<?php echo $data['stok'] ?>"></p>
                 <input type="submit" name="submit" value="submit" class="submit-btn">
-            </div>
-        </form>
-
+            </form>
+        </div>
     </div>
    </div>
-
-</body>
-</html>

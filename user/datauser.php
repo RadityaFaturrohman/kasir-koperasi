@@ -1,13 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <!doctype html>
+<?php
+    include '../koneksi.php';
+?>
+
+<!doctype html>
 <html lang="en">
 
     <head>
@@ -33,11 +28,15 @@
         <!-- App Css-->
         <link href="../assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
 
-        <!-- Font Awesome-->
+        <!-- Font Awesome -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 
-        <link rel="stylesheet" type="text/css" href="../styles.css?version=1" />
+        <link rel="stylesheet" type="text/css" href="../style.css?<?php echo time(); ?>" />
 
+        <!-- Nunito Sans -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap" rel="stylesheet">
 
     </head>
 
@@ -208,26 +207,82 @@
        </div>
    </div>
    <!-- Left Sidebar End -->
+
    <div class="main-content">
-    <div class="container" style="overflow: auto;">
-        
-        <form action="submit.php" method="POST">
-            <div class="form">
-                <p><label>ID Barang</label><input type="text" name="id_barang" required="required"></p>
-                <p><label>Nama Barang</label><input type="text" name="nama_barang" required="required"></p>
-                <p><label>Jenis Barang</label><select name="jenis" id="jenis">
-                    <option>Makanan</option>
-                    <option>Minuman</option>
-                    <option>Alat Tulis</option>
-                </select></p>
-                <p><label>Harga</label><input type="number" name="harga" required="required"></p>
-                <p><label>Stok</label><input type="number" name="stok" required="required"></p>
-                <input type="submit" name="submit" value="submit" class="submit-btn">
+                <div class="container" style="overflow: auto;">
+                <a class="btn btn-info ml-0 mt-5 mb-2 create-btn " href="createform.html">Create</a>
+                <table class="table table_saya">
+                    <thead>
+                      <tr class="shadow p-3 mb-5 text-center ">
+                        <th scope="col">ID User</th>
+                        <th scope="col">Nama User</th>
+                        <th scope="col">Telepon</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                <?php
+                    $sql = "SELECT * FROM user";
+                    $query = mysqli_query($connect,$sql);
+                    while($barang = mysqli_fetch_array($query)){
+                        echo "<tr class='text-center '>";
+                        echo "<td>".$barang['id_user']."</td>";
+                        echo "<td>".$barang['nama_user']."</td>";
+                        echo "<td>".$barang['telepon']."</td>";
+                        echo "<td>".$barang['email']."</td>";
+
+                        echo "<td style='width:20%'>";
+                        echo "<a class='btn btn-outline-info action-btn' href='formedit.php?id=".$barang['id_user']."'>Edit</a> | ";
+                        echo "<a class='btn btn-outline-danger action-btn' href='delete.php?id=".$barang['id_user']."'>Delete</a>";
+                        echo "</td>";
+                        echo "</tr>";
+                    }
+                    ?>
+                    </tbody>
+                  </table>
+                  </div>
+                
+                <!-- End Page-content -->
+
+            <!-- end main content-->
+
+            <div class="main-content">
+            <div class="page-content">
+                <div class="container-fluid">
+                </div>
             </div>
-        </form>
+            </div>
 
+        </div>
+
+        <!-- JAVASCRIPT -->
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/libs/metismenujs/metismenujs.min.js"></script>
+    <script src="assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="assets/libs/feather-icons/feather.min.js"></script>
+
+    <!-- swiper js -->
+    <script src="assets/libs/swiper/swiper-bundle.min.js"></script>
+    
+    <script src="assets/js/pages/dashboard.init.js"></script>
+
+    <script src="assets/js/app.js"></script>
+
+   <footer class="footer">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6">
+                <script>document.write(new Date().getFullYear())</script> &copy; Taruna Bhakti.
+            </div>
+            <div class="col-sm-6">
+                <div class="text-sm-end d-none d-sm-block">
+                    Created by <a href= "https://www.facebook.com/yudiya.ahrian.7" target="_blank" class="text-reset">Yudiya Ahrian</a>
+                </div>
+            </div>
+        </div>
     </div>
-   </div>
-
+    </footer>
+</div>
 </body>
 </html>
