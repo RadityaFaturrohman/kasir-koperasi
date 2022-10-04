@@ -1,5 +1,16 @@
 <?php
+
     include 'koneksi.php';
+
+    $id = $_GET['id'] ;
+    $sql = "SELECT * FROM datauser WHERE id='$id'";
+    $query = mysqli_query($connect,$sql);
+    $data = mysqli_fetch_assoc($query);
+
+    if(mysqli_num_rows($query) < 1){
+        die("Data Tidak Ditemukan");
+    }
+
 ?>
 
 <!doctype html>
@@ -31,7 +42,7 @@
         <!-- Font Awesome-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 
-        <link rel="stylesheet" href="datauser.css">
+        <link rel="stylesheet" href="edituser.css">
 
     </head>
 
@@ -327,7 +338,7 @@
                    </li>
 
                    <li>
-                       <a href="apps-file-manager.html">
+                       <a href="datauser.php">
                            <i class="fa-solid fa-users nav-icon"></i>
                            <span class="menu-item" data-key="t-filemanager">List User</span>
                        </a>
@@ -356,52 +367,42 @@
 
 <div id="table">
 
-<div class="create">
-     <a href="datasiswa.html" class="text-create">CREATE</a>
- </div>
+<form action="perubahan.php" method="post">
+                <table class="table">
 
- <table  border="1"  class="table">
-         <tr>
-             <th>ID</th>
-             <th>Nama User</th>
-             <th>Alamat</th>
-             <th>Telepon</th>
-             <th>Kelas</th>
-             <th>Aksi</th>
-         </tr>
-         <?php
-     $sql = "SELECT * FROM datauser";
-     $query = mysqli_query($connect,$sql);
+                    <tr>
+                        <td><p><label>ID</p></td>
+                        <td>:</td>
+                        <td> <input type="number" name="id" id="long" value="<?php echo $data['id'] ?>"></label></td>
+                    </tr>
+                    <tr>
+                        <td><p><label>Nama</p></td>
+                        <td>:</td>
+                        <td> <input type="text" name="namauser" id="long" value="<?php echo $data['namauser'] ?>"></label></td>
+                    </tr>
+                    <tr>
+                        <td><p><label>Alamat</p></td>
+                        <td>:</td>
+                        <td> <input type="text" name="alamat" id="long" value="<?php echo $data['alamat'] ?>"></label></td>
+                    </tr>
+                    <tr>
+                        <td><p><label>Telepon</p></td>
+                        <td>:</td>
+                        <td> <input type="number" name="telepon" id="long" value="<?php echo $data['telepon'] ?>"></label></td>
+                    </tr>
+                    <tr>
+                        <td><p><label>Kelas</p></td>
+                        <td>:</td>
+                        <td> <input type="text" name="kelas" id="long" value="<?php echo $data['kelas'] ?>"></label></td>
+                    </tr>
+    
+                </table>
+                        
+                <input type="submit" name="Lanjutkan" value="Lanjutkan" id="lanjutkan">
+
+            </form>
      
-
-     while($data = mysqli_fetch_array($query)){
-         echo"
-         <tr>
-             <td>$data[id]</td>
-             <td>$data[namauser]</td>
-             <td>$data[alamat]</td>
-             <td>$data[telepon]</td>
-             <td>$data[kelas]</td>
-             
-             <td>
-
-             <div class='kotakaja'><a href='edituser.php?id=".$data['id']."' class='button'>Edit</a></div>
-
-             <div class='kotakajaa'><a href='hapus.php?id=".$data['id']."' class='button'>Hapus</a></div>
-                
-              
-
-             </td>
-        </tr>
-     ";
-     }
- ?>
-
-         
-      </table> 
-
-</div>
-
+        </div>
+    
 </body>
 </html>
-
