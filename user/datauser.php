@@ -176,21 +176,21 @@
                    <li class="menu-title" data-key="t-applications">General</li>
 
                    <li>
-                       <a href="../transaksi.php">
+                       <a href="../transaksi/transaksi.php">
                            <i class="fa-solid fa-money-bill-transfer nav-icon"></i>
                            <span class="menu-item" data-key="t-calendar">Transaksi</span>
                        </a>
                    </li>
 
-                   <li>
-                       <a href="../barang.html">
+                   <li >
+                       <a href="../barang/barang.php">
                            <i class="fa-solid fa-boxes-stacked nav-icon"></i>
                            <span class="menu-item" data-key="t-chat">Barang</span>
                        </a>
                    </li>
 
-                   <li  class="mm-active text-info">
-                       <a href="../datauser.php">
+                   <li class="mm-active text-info">
+                       <a href="datauser.php">
                            <i class="fa-solid fa-users nav-icon"></i>
                            <span class="menu-item" data-key="t-filemanager">List User</span>
                        </a>

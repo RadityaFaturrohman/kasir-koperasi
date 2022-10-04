@@ -1,10 +1,52 @@
+<?php
+    include '../koneksi.php';
+
+    $id_user = $_GET['id_user'];
+    $sql = "SELECT * FROM user WHERE id_user = '$id_user'";
+    $query = mysqli_query($connect,$sql);
+    $data = mysqli_fetch_assoc($query);
+
+    if(mysqli_num_rows($query)< 1){
+        die("data tidak ditemukan");
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<head>
+
+<meta charset="utf-8" />
+<title>Kasir Koperasi</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+<meta content="Themesdesign" name="author" />
+<!-- App favicon -->
+<link rel="shortcut icon" href="../assets/images/favicon.ico">
+
+<!-- plugin css -->
+<link href="../assets/libs/jsvectormap/css/jsvectormap.min.css" rel="stylesheet" type="text/css" />
+
+<!-- swiper css -->
+<link rel="stylesheet" href="../assets/libs/swiper/swiper-bundle.min.css">
+
+<!-- Bootstrap Css -->
+<link href="../assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+<!-- Icons Css -->
+<link href="../assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+<!-- App Css-->
+<link href="../assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+<link rel="stylesheet" type="text/css" href="../style.css?<?php echo time(); ?>" />
+
+<!-- Nunito Sans -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <!doctype html>
@@ -36,7 +78,7 @@
         <!-- Font Awesome-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 
-        <link rel="stylesheet" href="../styles.css" />
+        <link rel="stylesheet" type="text/css" href="../styles.css?version=1" />
 
 
     </head>
@@ -176,8 +218,8 @@
 
                    <li class="menu-title" data-key="t-applications">General</li>
 
-                   <li class="mm-active text-info">
-                       <a href="transaksi.php">
+                   <li>
+                       <a href="../transaksi/transaksi.php">
                            <i class="fa-solid fa-money-bill-transfer nav-icon"></i>
                            <span class="menu-item" data-key="t-calendar">Transaksi</span>
                        </a>
@@ -190,8 +232,8 @@
                        </a>
                    </li>
 
-                   <li>
-                       <a href="../user/datauser.php">
+                   <li class="mm-active text-info">
+                       <a href="datauser.php">
                            <i class="fa-solid fa-users nav-icon"></i>
                            <span class="menu-item" data-key="t-filemanager">List User</span>
                        </a>
@@ -203,21 +245,14 @@
    <!-- Left Sidebar End -->
    <div class="main-content">
     <div class="container" style="overflow: auto;">
-        
-        <form action="submit.php" method="POST">
-            <div class="form">
-                <p><label>ID Transaksi</label><input type="text" name="id_transaksi" required="required"></p>
-                <p><label>ID Barang</label><input type="text" name="id_barang" required="required"></p>
-                <p><label>Nama Barang</label><input type="text" name="nama_barang" required="required"></p>
-                <p><label>Harga</label><input type="text" name="harga" required="required"></p>
-                <p><label>Jumlah Beli</label><input type="number" name="jml_beli" required="required"></p>
-                <p><label>Total Harga</label><input type="text" name="total" required="required"></p>
+        <div class="form">
+            <form action="edit.php" method="POST" class="table">
+                <input type="hidden" name="id_user" value="<?php echo $data['id_user']?>"/>
+                <p><label>Nama User</label><label class="ltext2">:</label><input type="text" name="nama_user" value="<?php echo $data['nama_user'] ?>"></p>
+                <p><label>Telepon</label><label class="ltext4">:</label><input type="tel" name="telepon" value="<?php echo $data['telepon'] ?>"></p>
+                <p><label>Email</label><label class="ltext5">:</label><input type="email" name="email" value="<?php echo $data['email'] ?>"></p>
                 <input type="submit" name="submit" value="submit" class="submit-btn">
-            </div>
-        </form>
-
+            </form>
+        </div>
     </div>
    </div>
-
-</body>
-</html>

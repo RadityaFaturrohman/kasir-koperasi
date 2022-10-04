@@ -176,21 +176,21 @@
                    <li class="menu-title" data-key="t-applications">General</li>
 
                    <li class="mm-active text-info">
-                       <a href="../transaksi.php">
+                       <a href="transaksi.php">
                            <i class="fa-solid fa-money-bill-transfer nav-icon"></i>
                            <span class="menu-item" data-key="t-calendar">Transaksi</span>
                        </a>
                    </li>
 
                    <li>
-                       <a href="../barang.html">
+                       <a href="../barang/barang.php">
                            <i class="fa-solid fa-boxes-stacked nav-icon"></i>
                            <span class="menu-item" data-key="t-chat">Barang</span>
                        </a>
                    </li>
 
                    <li>
-                       <a href="../datauser.php">
+                       <a href="../user/datauser.php">
                            <i class="fa-solid fa-users nav-icon"></i>
                            <span class="menu-item" data-key="t-filemanager">List User</span>
                        </a>
@@ -229,8 +229,7 @@
                         echo "<td>".$transaksi['jml_beli']."</td>";
                         echo "<td>".$transaksi['total']."</td>";
 
-                        echo "<td style='width:20%'>";
-                        echo "<a class='btn btn-outline-info action-btn' href=formedit.php?id_transaksi=".$transaksi['id_transaksi'].">Edit</a> | ";
+                        echo "<td style='width:10%'>";
                         echo "<a class='btn btn-outline-danger action-btn' href=delete.php?id_transaksi=".$transaksi['id_transaksi'].">Delete</a>";
                         echo "</td>";
                         echo "</tr>";

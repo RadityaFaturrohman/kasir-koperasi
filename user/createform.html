@@ -176,8 +176,8 @@
 
                    <li class="menu-title" data-key="t-applications">General</li>
 
-                   <li class="mm-active text-info">
-                       <a href="transaksi.php">
+                   <li>
+                       <a href="../transaksi/transaksi.php">
                            <i class="fa-solid fa-money-bill-transfer nav-icon"></i>
                            <span class="menu-item" data-key="t-calendar">Transaksi</span>
                        </a>
@@ -190,8 +190,8 @@
                        </a>
                    </li>
 
-                   <li>
-                       <a href="../user/datauser.php">
+                   <li class="mm-active text-info">
+                       <a href="datauser.php">
                            <i class="fa-solid fa-users nav-icon"></i>
                            <span class="menu-item" data-key="t-filemanager">List User</span>
                        </a>
@@ -206,12 +206,10 @@
         
         <form action="submit.php" method="POST">
             <div class="form">
-                <p><label>ID Transaksi</label><input type="text" name="id_transaksi" required="required"></p>
-                <p><label>ID Barang</label><input type="text" name="id_barang" required="required"></p>
-                <p><label>Nama Barang</label><input type="text" name="nama_barang" required="required"></p>
-                <p><label>Harga</label><input type="text" name="harga" required="required"></p>
-                <p><label>Jumlah Beli</label><input type="number" name="jml_beli" required="required"></p>
-                <p><label>Total Harga</label><input type="text" name="total" required="required"></p>
+                <p><label>ID User</label><input type="text" name="id_user" required="required"></p>
+                <p><label>Nama User</label><input type="text" name="nama_user" required="required"></p>
+                <p><label>Telepon</label><input type="tel" name="telepon" required="required"></p>
+                <p><label>Email</label><input type="email" name="email" required="required"></p>
                 <input type="submit" name="submit" value="submit" class="submit-btn">
             </div>
         </form>
