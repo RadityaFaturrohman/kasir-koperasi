@@ -14,10 +14,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<head>
+
+<meta charset="utf-8" />
+<title>Kasir Koperasi</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+<meta content="Themesdesign" name="author" />
+<!-- App favicon -->
+<link rel="shortcut icon" href="../assets/images/favicon.ico">
+
+<!-- plugin css -->
+<link href="../assets/libs/jsvectormap/css/jsvectormap.min.css" rel="stylesheet" type="text/css" />
+
+<!-- swiper css -->
+<link rel="stylesheet" href="../assets/libs/swiper/swiper-bundle.min.css">
+
+<!-- Bootstrap Css -->
+<link href="../assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+<!-- Icons Css -->
+<link href="../assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+<!-- App Css-->
+<link href="../assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+<link rel="stylesheet" type="text/css" href="../style.css?<?php echo time(); ?>" />
+
+<!-- Nunito Sans -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <!doctype html>
@@ -204,13 +233,6 @@
                    </li>
 
                    <li>
-                       <a href="../penjualan.php">
-                           <i class="fa-solid fa-box-open nav-icon"></i>
-                           <span class="menu-item" data-key="t-kanban">Penjualan</span>
-                       </a>
-                   </li>
-
-                   <li>
                        <a href="../datauser.php">
                            <i class="fa-solid fa-users nav-icon"></i>
                            <span class="menu-item" data-key="t-filemanager">List User</span>
@@ -226,14 +248,14 @@
         <div class="form">
             <form action="edit.php" method="POST" class="table">
                 <input type="hidden" name="id_barang" value="<?php echo $data['id_barang']?>"/>
-                <p><label>Nama Barang</label><input type="text" name="nama_barang" value="<?php echo $data['nama_barang'] ?>"></p>
-                <p><label>Jenis</label><select name="jenis" id="jenis" value="<?php echo $data['jenis'] ?>">
+                <p><label>Nama Barang</label><label class="ltext2">:</label><input type="text" name="nama_barang" value="<?php echo $data['nama_barang'] ?>"></p>
+                <p><label>Jenis</label><label class="ltext3">:</label><select name="jenis" id="jenis" value="<?php echo $data['jenis'] ?>">
                     <option>Makanan</option>
                     <option>Minuman</option>
                     <option>Alat Tulis</option>
                 </select></p>
-                <p><label>Harga</label><input type="number" name="harga" value="<?php echo $data['harga'] ?>"></p>
-                <p><label>Stok</label><input type="number" name="stok" value="<?php echo $data['stok'] ?>"></p>
+                <p><label>Harga</label><label class="ltext4">:</label><input type="number" name="harga" value="<?php echo $data['harga'] ?>"></p>
+                <p><label>Stok</label><label class="ltext5">:</label><input type="number" name="stok" value="<?php echo $data['stok'] ?>"></p>
                 <input type="submit" name="submit" value="submit" class="submit-btn">
             </form>
         </div>

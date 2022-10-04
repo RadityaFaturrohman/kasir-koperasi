@@ -224,7 +224,7 @@
                         echo "<tr class='text-center '>";
                         echo "<td>".$transaksi['id_transaksi']."</td>";
                         echo "<td>".$transaksi['id_barang']."</td>";
-                        echo "<td>".$transaksi['nama_transaksi']."</td>";
+                        echo "<td>".$transaksi['nama_barang']."</td>";
                         echo "<td>".$transaksi['harga']."</td>";
                         echo "<td>".$transaksi['jml_beli']."</td>";
                         echo "<td>".$transaksi['total']."</td>";
