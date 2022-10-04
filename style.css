@@ -1,0 +1,44 @@
+.table_saya{
+    width: 75%;
+    box-shadow: 2px 1px 5px 0px rgba(193, 193, 193, 0.75);
+    overflow-y: auto;
+    height: auto;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.table_saya th{
+    background-color: #375b69;
+    border-collapse: collapse;
+    color: rgb(222, 224, 226);
+    box-shadow: 1px 4px 5px 0px rgba(174, 174, 174, 0.75);
+}
+
+td{
+    font-size: 14px;
+    background-color: azure;
+
+}
+
+.create-btn{
+    margin-left: 5px;
+    height: 34px;
+    padding-top: 6px;
+}
+
+.action-btn{
+    height: 32px;
+    text-align: center;
+    margin: 0 2px;
+    padding-top: 4px;
+}
+
+.form p:nth-child(1){
+    background-color: aqua  ;
+    position: absolute;
+    top: 40%;
+}
+
+.form p:nth-child(2){
+    position: absolute;
+    top: 50%;
+}

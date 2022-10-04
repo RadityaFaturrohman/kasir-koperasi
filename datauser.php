@@ -8,7 +8,7 @@
     <head>
 
         <meta charset="utf-8" />
-        <title>Vertical | Vuesy - Admin & Dashboard Template</title>
+        <title>Kasir Koperasi</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
         <meta content="Themesdesign" name="author" />
@@ -27,6 +27,9 @@
         <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
         <!-- App Css-->
         <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+
+        <!-- Font Awesome-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 
         <link rel="stylesheet" href="datauser.css">
 
@@ -161,7 +164,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </a>
+                                    </a>
                                 <a href="" class="text-reset notification-item">
                                     <div class="d-flex border-bottom align-items-start">
                                         <div class="flex-shrink-0">
@@ -256,134 +259,144 @@
             </div>
   
         </header>
+    
+    <div class="vertical-menu">
 
-        <!-- ========== Left Sidebar Start ========== -->
-        <div class="vertical-menu">
 
+        <!-- LOGO -->
+        <div class="navbar-brand-box">
+           <a href="index.html" class="logo logo-dark">
+               <span class="logo-sm">
+                   <img src="assets/images/logo-sm.svg" alt="" height="26">
+               </span>
+               <span class="logo-lg">
+                   <img src="assets/images/logo-sm.svg" alt="" height="26"> <span class="logo-txt">Vuesy</span>
+               </span>
+           </a>
 
-             <!-- LOGO -->
-             <div class="navbar-brand-box">
-                <a href="index.html" class="logo logo-dark">
-                    <span class="logo-sm">
-                        <img src="assets/images/logo-sm.svg" alt="" height="26">
-                    </span>
-                    <span class="logo-lg">
-                        <img src="assets/images/logo-sm.svg" alt="" height="26"> <span class="logo-txt">Vuesy</span>
-                    </span>
-                </a>
+           <a href="index.html" class="logo logo-light">
+               <span class="logo-sm">
+                   <img src="assets/images/logo-sm.svg" alt="" height="26">
+               </span>
+               <span class="logo-lg">
+                   <img src="assets/images/logo-sm.svg" alt="" height="26"> <span class="logo-txt">Vuesy</span>
+               </span>
+           </a>
+       </div>
 
-                <a href="index.html" class="logo logo-light">
-                    <span class="logo-sm">
-                        <img src="assets/images/logo-sm.svg" alt="" height="26">
-                    </span>
-                    <span class="logo-lg">
-                        <img src="assets/images/logo-sm.svg" alt="" height="26"> <span class="logo-txt">Vuesy</span>
-                    </span>
-                </a>
+       <button type="button" class="btn btn-sm px-3 font-size-16 header-item vertical-menu-btn">
+           <i class="fa fa-fw fa-bars"></i>
+       </button>
+
+       <div data-simplebar class="sidebar-menu-scroll">
+
+           <!--- Sidemenu -->
+           <div id="sidebar-menu">
+               <!-- Left Menu Start -->
+               <ul class="metismenu list-unstyled" id="side-menu">
+                   <li class="menu-title" data-key="t-menu">Menu</li>
+
+                   <li class="mm-active">
+                       <a href="#">
+                           <i class="bx bx-home-circle nav-icon"></i>
+                           <span class="menu-item" data-key="t-dashboard">Dashboard</span>
+                       </a>
+                   </li>
+
+                   <li class="menu-title" data-key="t-applications">General</li>
+
+                   <li>
+                       <a href="landingpage.php">
+                           <i class="fa-solid fa-money-bill-transfer nav-icon"></i>
+                           <span class="menu-item" data-key="t-calendar">Transaksi</span>
+                       </a>
+                   </li>
+
+                   <li>
+                       <a href="apps-chat.html">
+                           <i class="fa-solid fa-boxes-stacked nav-icon"></i>
+                           <span class="menu-item" data-key="t-chat">Barang</span>
+                       </a>
+                   </li>
+
+                   <li>
+                       <a href="womenwatch.php">
+                           <i class="fa-solid fa-box-open nav-icon"></i>
+                           <span class="menu-item" data-key="t-kanban">Penjualan</span>
+                       </a>
+                   </li>
+
+                   <li>
+                       <a href="apps-file-manager.html">
+                           <i class="fa-solid fa-users nav-icon"></i>
+                           <span class="menu-item" data-key="t-filemanager">List User</span>
+                       </a>
+                   </li>
+           </div>
+           <!-- Sidebar -->
+       </div>
+   </div>
+   <!-- Left Sidebar End -->
+
+   <footer class="footer">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6">
+                <script>document.write(new Date().getFullYear())</script> &copy; Taruna Bhakti.
             </div>
-
-            <button type="button" class="btn btn-sm px-3 font-size-16 header-item vertical-menu-btn">
-                <i class="fa fa-fw fa-bars"></i>
-            </button>
-
-            <div data-simplebar class="sidebar-menu-scroll">
-
-                <!--- Sidemenu -->
-                <div id="sidebar-menu">
-                    <!-- Left Menu Start -->
-                    <ul class="metismenu list-unstyled" id="side-menu">
-                        <li class="menu-title" data-key="t-menu">Menu</li>
-
-                        <li class="mm-active">
-                            <a href="index.php">
-                                <i class="bx bx-home-circle nav-icon"></i>
-                                <span class="menu-item" data-key="t-dashboard">Dashboard</span>
-                            </a>
-                        </li>
-
-                        <li class="menu-title" data-key="t-applications">Applications</li>
-
-                        <li>
-                            <a href="transaksi.php">
-                                <i class="bx bxl-trello nav-icon"></i>
-                                <span class="menu-item" data-key="t-calendar">Transaksi</span>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="barang.php">
-                                <i class="bx bx-diamond nav-icon"></i>
-                                <span class="menu-item" data-key="t-chat">Barang</span>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="penjualan.php">
-                                <i class="bx bxs-watch-alt nav-icon"></i>
-                                <span class="menu-item" data-key="t-kanban">Penjualan</span>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="datauser.php">
-                                <i class="bx bxs-watch nav-icon"></i>
-                                <span class="menu-item" data-key="t-filemanager">List User</span>
-                            </a>
-                        </li>
+            <div class="col-sm-6">
+                <div class="text-sm-end d-none d-sm-block">
+                    Created by <a href= "https://www.facebook.com/yudiya.ahrian.7" target="_blank" class="text-reset">Yudiya Ahrian</a>
                 </div>
-                <!-- Sidebar -->
             </div>
         </div>
-
-       
-        <div class="create">
-            <a href="siswa.html" class="text-create">CREATE</a>
-        </div>
-
-        <table border="1">
-                <tr>
-                    <th>ID</th>
-                    <th>Nama</th>
-                    <th>Kelamin</th>
-                    <th>Tanggal-Lahir</th>
-                    <th>Alamat</th>
-                    <th>Kelas</th>
-                    <th>Aksi</th>
-                </tr>
-            <?php
-            $sql = "SELECT * FROM list_user";
-            $query = mysqli_query($connect,$sql);
-            
-
-            while($data = mysqli_fetch_array($query)){
-                echo"
-                <tr>
-                    <td>$data[ID]</td>
-                    <td>$data[Nama]</td>
-                    <td>$data[Kelamin]</td>
-                    <td>$data[TanggalLahir]</td>
-                    <td>$data[Alamat]</td>
-                    <td>$data[Kelas]</td>
-                    <td>
-    
-                    <div class='kotakaja'><a href='formubah.php?ID=".$data['ID']."' class='button'>Edit</a></div>
-
-                    <div class='kotakajaa'><a href='hapus.php?ID=".$data['ID']."' class='button'>Hapus</a></div>
-                       
-                     
-    
-                    </td>
-            </tr>
-            ";
-            }
-        ?>
-
-                
-             </table> 
-    
     </div>
+    </footer>
+</div>
 
+<div id="table">
 
-    </body>
+<div class="create">
+     <a href="siswa.html" class="text-create">CREATE</a>
+ </div>
 
+ <table  class="table project-list-table table-nowrap align-middle table-borderless mb-0">
+         <tr>
+             <th>Id</th>
+             <th>Nama User</th>
+             <th>telepon</th>
+             <th>email</th>
+             <th>Aksi</th>
+         </tr>
+         <?php
+     $sql = "SELECT * FROM user";
+     $query = mysqli_query($connect,$sql);
+     
+
+     while($data = mysqli_fetch_array($query)){
+         echo"
+         <tr>
+             <td>$data[id_user]</td>
+             <td>$data[nama_user]</td>
+             <td>$data[telepon]</td>
+             <td>$data[email]</td>
+
+             <div class='kotakaja'><a href='formubah.php?id=".$data['id_user']."' class='button'>Edit</a></div>
+
+             <div class='kotakajaa'><a href='hapus.php?id=".$data['id_user']."' class='button'>Hapus</a></div>
+                
+              
+
+             </td>
+        </tr>
+     ";
+     }
+ ?>
+
+         
+</table> 
+
+</div>
+
+</body>
 </html>

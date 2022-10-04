@@ -33,7 +33,7 @@
 
     </head>
 
-    <body data-topbar="dark" data-sidebar="dark" data-layout-mode="dark">
+    <body data-topbar="p-3 mb-2 bg-info text-white" data-sidebar="light" data-layout-mode="light">
 
     <!-- Begin page -->
     <div id="layout-wrapper">
@@ -312,7 +312,7 @@
                         </li>
 
                         <li>
-                            <a href="barang.php">
+                            <a href="barang/barang.php">
                                 <i class="fa-solid fa-boxes-stacked nav-icon"></i>
                                 <span class="menu-item" data-key="t-chat">Barang</span>
                             </a>
