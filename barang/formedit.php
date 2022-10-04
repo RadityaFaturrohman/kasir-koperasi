@@ -3,11 +3,11 @@
 
     $id_barang = $_GET['id_barang'];
     $sql = "SELECT * FROM barang WHERE id_barang = '$id_barang'";
-    $query = mysql_query($connect, $sql);
+    $query = mysqli_query($connect,$sql);
     $data = mysqli_fetch_assoc($query);
 
-    if (mysqli_num_rows($query)< 1){
-        die("data tidak ditemukan"
+    if(mysqli_num_rows($query)< 1){
+        die("data tidak ditemukan");
     }
 ?>
 
@@ -224,7 +224,7 @@
    <div class="main-content">
     <div class="container" style="overflow: auto;">
         <div class="form">
-            <form action="edit.php" method="POST">
+            <form action="edit.php" method="POST" class="table">
                 <input type="hidden" name="id_barang" value="<?php echo $data['id_barang']?>"/>
                 <p><label>Nama Barang</label><input type="text" name="nama_barang" value="<?php echo $data['nama_barang'] ?>"></p>
                 <p><label>Jenis</label><select name="jenis" id="jenis" value="<?php echo $data['jenis'] ?>">

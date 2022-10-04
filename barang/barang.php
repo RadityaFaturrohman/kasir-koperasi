@@ -190,13 +190,6 @@
                    </li>
 
                    <li>
-                       <a href="../penjualan.php">
-                           <i class="fa-solid fa-box-open nav-icon"></i>
-                           <span class="menu-item" data-key="t-kanban">Penjualan</span>
-                       </a>
-                   </li>
-
-                   <li>
                        <a href="../datauser.php">
                            <i class="fa-solid fa-users nav-icon"></i>
                            <span class="menu-item" data-key="t-filemanager">List User</span>
@@ -235,8 +228,8 @@
                         echo "<td>".$barang['stok']."</td>";
 
                         echo "<td style='width:20%'>";
-                        echo "<a class='btn btn-outline-info action-btn' href='formedit.php?id=".$barang['id_barang']."'>Edit</a> | ";
-                        echo "<a class='btn btn-outline-danger action-btn' href='delete.php?id=".$barang['id_barang']."'>Delete</a>";
+                        echo "<a class='btn btn-outline-info action-btn' href=formedit.php?id_barang=".$barang['id_barang'].">Edit</a> | ";
+                        echo "<a class='btn btn-outline-danger action-btn' href=delete.php?id_barang=".$barang['id_barang'].">Delete</a>";
                         echo "</td>";
                         echo "</tr>";
                     }

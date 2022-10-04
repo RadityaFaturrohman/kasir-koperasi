@@ -9,7 +9,7 @@
         $stok = $_POST['stok'];
 
         $sql =" UPDATE barang SET nama_barang = '$nama_barang', jenis='$jenis', harga='$harga', stok='$stok' WHERE id_barang = '$id_barang'";
-        $query = mysql_query($connect, $sql);
+        $query = mysqli_query($connect, $sql);
 
         if ($query){
             header("Location: barang.php");
