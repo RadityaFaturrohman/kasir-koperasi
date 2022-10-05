@@ -245,13 +245,30 @@
    <!-- Left Sidebar End -->
    <div class="main-content">
     <div class="container" style="overflow: auto;">
-        <div class="form">
-            <form action="edit.php" method="POST" class="table">
+        <div class="form">`
+        
+            <form action="edit.php" method="POST">
                 <input type="hidden" name="id_user" value="<?php echo $data['id_user']?>"/>
-                <p><label>Nama User</label><label class="ltext2">:</label><input type="text" name="nama_user" value="<?php echo $data['nama_user'] ?>"></p>
-                <p><label>Telepon</label><label class="ltext4">:</label><input type="tel" name="telepon" value="<?php echo $data['telepon'] ?>"></p>
-                <p><label>Email</label><label class="ltext5">:</label><input type="email" name="email" value="<?php echo $data['email'] ?>"></p>
-                <input type="submit" name="submit" value="submit" class="submit-btn">
+                <table class="table">
+            <tr>
+                <td>Nama User</td>
+                <td>:</td>
+                <td><input type="text" value="<?php echo $data['nama_user'] ?>"></td>
+            </tr>
+            <tr>
+                <td>Telepon</td>
+                <td>:</td>
+                <td><input type="tel" name="telepon" value="<?php echo $data['telepon'] ?>"></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>:</td>
+                <td><input type="email" name="email" value="<?php echo $data['email'] ?>"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" name="submit" value="submit"></td>
+            </tr>
+        </table>
             </form>
         </div>
     </div>

@@ -203,16 +203,46 @@
    <!-- Left Sidebar End -->
    <div class="main-content">
     <div class="container" style="overflow: auto;">
+
+        
         
         <form action="submit.php" method="POST">
             <div class="form">
-                <p><label>ID Transaksi</label><input type="text" name="id_transaksi" required="required"></p>
-                <p><label>ID Barang</label><input type="text" name="id_barang" required="required"></p>
-                <p><label>Nama Barang</label><input type="text" name="nama_barang" required="required"></p>
-                <p><label>Harga</label><input type="text" name="harga" required="required"></p>
-                <p><label>Jumlah Beli</label><input type="number" name="jml_beli" required="required"></p>
-                <p><label>Total Harga</label><input type="text" name="total" required="required"></p>
-                <input type="submit" name="submit" value="submit" class="submit-btn">
+                <table class="table">
+                    <tr>
+                        <td>ID Transaksi</td>
+                        <td>:</td>
+                        <td><input type="text" name="id_transaksi" required="required"></td>
+                    </tr>
+                    <tr>
+                        <td>ID Barang</td>
+                        <td>:</td>
+                        <td><input type="text" name="id_barang" required="required"></td>
+                    </tr>
+                    <tr>
+                        <td>Nama Barang</td>
+                        <td>:</td>
+                        <td><input type="text" name="nama_barang" required="required"></td>
+                    </tr>
+                    <tr>
+                        <td>Harga</td>
+                        <td>:</td>
+                        <td><input type="text" name="harga" required="required"></td>
+                    </tr>
+                    <tr>
+                        <td>Jumlah Beli</td>
+                        <td>:</td>
+                        <td><input type="number" name="jml_beli" required="required"></td>
+                    </tr>
+                    <tr>
+                        <td>Total Harga</td>
+                        <td>:</td>
+                        <td><input type="text" name="total" required="required"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" name="submit" value="submit" class="submit-btn"></td>
+                    </tr>
+                </table>
             </div>
         </form>
 

@@ -81,10 +81,11 @@ label{
 .submit-btn{
     margin-top: 10px;
     margin-left: 470px;
-    padding-right: 10px;
+    padding-right: 1px;
+    padding-top: -100px;
     height: 34px;
     width: 90px;
-    background-color: var(--button);
+    background-color:#375b69;
     border: none;
     border-radius: 10px;
     text-decoration: none;
@@ -116,3 +117,5 @@ label{
 select{
     padding-left: 10px;
 }
+
+
