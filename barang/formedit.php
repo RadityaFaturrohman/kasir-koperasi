@@ -246,17 +246,37 @@
    <div class="main-content">
     <div class="container" style="overflow: auto;">
         <div class="form">
-            <form action="edit.php" method="POST" class="table">
+            <form action="edit.php" method="POST">
                 <input type="hidden" name="id_barang" value="<?php echo $data['id_barang']?>"/>
-                <p><label>Nama Barang</label><label class="ltext2">:</label><input type="text" name="nama_barang" value="<?php echo $data['nama_barang'] ?>"></p>
-                <p><label>Jenis</label><label class="ltext3">:</label><select name="jenis" id="jenis" value="<?php echo $data['jenis'] ?>">
+                <table class="table">
+            <tr>
+                <td>Nama Barang</td>
+                <td>:</td>
+                <td><input type="text" name="nama_barang" value="<?php echo $data['nama_barang'] ?>"></td>
+            </tr>
+            <tr>
+                <td>Jenis</td>
+                <td>:</td>
+                <td><select name="jenis" id="jenis" value="<?php echo $data['jenis'] ?>">
                     <option>Makanan</option>
                     <option>Minuman</option>
                     <option>Alat Tulis</option>
-                </select></p>
-                <p><label>Harga</label><label class="ltext4">:</label><input type="number" name="harga" value="<?php echo $data['harga'] ?>"></p>
-                <p><label>Stok</label><label class="ltext5">:</label><input type="number" name="stok" value="<?php echo $data['stok'] ?>"></p>
-                <input type="submit" name="submit" value="submit" class="submit-btn">
+                </select></td>
+            </tr>
+            <tr>
+                <td>Harga</td>
+                <td>:</td>
+                <td><input type="number" name="harga" value="<?php echo $data['harga'] ?>"></td>
+            </tr>
+            <tr>
+                <td>Stok</td>
+                <td>:</td>
+                <td><input type="number" name="stok" value="<?php echo $data['stok'] ?>"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" name="submit" value="submit" class="submit-btn"></td>
+            </tr>
+        </table>
             </form>
         </div>
     </div>

@@ -36,7 +36,7 @@
         <!-- Font Awesome-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 
-        <link rel="stylesheet" href="../styles.css" />
+        <link rel="stylesheet" type="text/css" href="../styles.css?version=2" />
 
 
     </head>
@@ -203,14 +203,37 @@
    <!-- Left Sidebar End -->
    <div class="main-content">
     <div class="container" style="overflow: auto;">
+
         
         <form action="submit.php" method="POST">
             <div class="form">
-                <p><label>ID User</label><input type="text" name="id_user" required="required"></p>
-                <p><label>Nama User</label><input type="text" name="nama_user" required="required"></p>
-                <p><label>Telepon</label><input type="tel" name="telepon" required="required"></p>
-                <p><label>Email</label><input type="email" name="email" required="required"></p>
-                <input type="submit" name="submit" value="submit" class="submit-btn">
+                <table>
+
+                    <tr>
+                        <td>ID User</td>
+                        <td>:</td>
+                        <td><input type="text" name="id_user" required="required"></td>
+                    </tr>
+                    <tr>
+                        <td>Nama User</td>
+                        <td>:</td>
+                        <td><input type="text" name="nama_user" required="required"></td>
+                    </tr>
+                    <tr>
+                        <td>Telepon</td>
+                        <td>:</td>
+                        <td><input type="tel" name="telepon" required="required"></td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td>:</td>
+                        <td><input type="email" name="email" required="required"></td>
+                    </tr>
+                    <tr>
+                        <td> <input type="submit" name="submit" value="submit" class="submit-btn"></td>
+                    </tr>
+        
+                </table>
             </div>
         </form>
 
